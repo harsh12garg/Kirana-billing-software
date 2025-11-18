@@ -46,8 +46,8 @@ const Login = () => {
                 <MDBCardBody className="p-5">
                   {/* Business Name */}
                   <div className="text-center mb-4">
-                    <h2 className="fw-bold text-primary mb-2">Harsh Kirana Store</h2>
-                    <p className="text-muted">Inventory & Billing Management</p>
+                    <h2 className="fw-bold text-primary mb-2">Inventory and Billing Software</h2>
+                    <p className="text-muted">Complete Business Management Solution</p>
                   </div>
 
                   {/* Welcome Text */}
@@ -129,7 +129,7 @@ const Login = () => {
 
               {/* Footer */}
               <p className="text-center mt-4 text-muted small">
-                © 2024 Harsh Kirana Store. All rights reserved.
+                © 2024 Inventory and Billing Software. All rights reserved.
               </p>
             </div>
           </div>
