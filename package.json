@@ -1,0 +1,30 @@
+{
+  "name": "kirana-shop-management",
+  "version": "1.0.0",
+  "description": "Full-stack Kirana Shop Management System with Inventory & Billing",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "dev-backend": "cd backend && npm run dev",
+    "dev-frontend": "cd frontend && npm run dev",
+    "build-frontend": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "deploy": "npm run build-frontend && npm run start"
+  },
+  "keywords": [
+    "kirana",
+    "shop",
+    "management",
+    "inventory",
+    "billing",
+    "pos"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

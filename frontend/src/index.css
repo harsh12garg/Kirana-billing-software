@@ -1,0 +1,2069 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* Premium Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Premium Card */
+.premium-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 4px 12px;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #f5f5f5;
+  color: #1976d2;
+}
+
+.sidebar-nav-item.active {
+  background-color: #1976d2;
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.sidebar-nav-item i {
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 280px;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Stats Card */
+.stats-card {
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.stats-card i {
+  font-size: 48px;
+  opacity: 0.8;
+}
+
+/* Table */
+.table-premium {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-premium thead {
+  background-color: #f8f9fa;
+}
+
+.table-premium tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table-premium tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Buttons */
+.btn-premium {
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 500;
+  text-transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Controls */
+.form-control-premium {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.form-control-premium:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+}
+
+/* Modal */
+.modal-premium .modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-premium .modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 24px;
+}
+
+.modal-premium .modal-body {
+  padding: 24px;
+}
+
+/* Badge */
+.badge-premium {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+body.dark-mode .sidebar {
+  background: #161b22;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+  border-right: 1px solid #30363d;
+}
+
+body.dark-mode .sidebar .border-bottom {
+  border-color: #30363d !important;
+}
+
+body.dark-mode .sidebar .border-top {
+  border-color: #30363d !important;
+}
+
+body.dark-mode .sidebar .bg-light {
+  background-color: #21262d !important;
+}
+
+body.dark-mode .sidebar-nav-item {
+  color: #8b949e;
+}
+
+body.dark-mode .sidebar-nav-item:hover {
+  background-color: #21262d;
+  color: #58a6ff;
+}
+
+body.dark-mode .sidebar-nav-item.active {
+  color: white;
+}
+
+body.dark-mode .premium-card,
+body.dark-mode .card {
+  background: #161b22;
+  color: #e6edf3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid #30363d;
+}
+
+body.dark-mode .table {
+  color: #e6edf3;
+}
+
+body.dark-mode .table thead {
+  background-color: #21262d;
+  border-color: #30363d;
+}
+
+body.dark-mode .table tbody tr {
+  border-color: #30363d;
+}
+
+body.dark-mode .table tbody tr:hover {
+  background-color: #21262d;
+}
+
+body.dark-mode .text-muted {
+  color: #8b949e !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode .form-outline input,
+body.dark-mode .form-outline textarea {
+  background-color: #0d1117 !important;
+  border-color: #30363d !important;
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode .form-outline input:focus,
+body.dark-mode .form-outline textarea:focus {
+  background-color: #0d1117 !important;
+  border-color: #58a6ff !important;
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .form-label,
+body.dark-mode .form-outline label,
+body.dark-mode label {
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .form-notch-leading,
+body.dark-mode .form-notch-middle,
+body.dark-mode .form-notch-trailing {
+  border-color: #30363d !important;
+}
+
+body.dark-mode .form-outline .form-control:focus ~ .form-notch .form-notch-leading,
+body.dark-mode .form-outline .form-control:focus ~ .form-notch .form-notch-middle,
+body.dark-mode .form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-color: #58a6ff !important;
+}
+
+body.dark-mode .modal-content {
+  background-color: #161b22;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+
+body.dark-mode .modal-header {
+  border-bottom-color: #30363d;
+}
+
+body.dark-mode .modal-footer {
+  border-top-color: #30363d;
+}
+
+body.dark-mode .btn-light {
+  background-color: #21262d;
+  border-color: #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode .btn-light:hover {
+  background-color: #30363d;
+  border-color: #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode .badge-light {
+  background-color: #21262d;
+  color: #e6edf3;
+}
+
+body.dark-mode .alert-info {
+  background-color: #1c2d41;
+  border-color: #30363d;
+  color: #58a6ff;
+}
+
+body.dark-mode .navbar {
+  background-color: #161b22 !important;
+  border-bottom: 1px solid #30363d;
+}
+
+body.dark-mode .main-content {
+  background-color: #0d1117;
+}
+
+body.dark-mode .input-group-text {
+  background-color: #21262d;
+  border-color: #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode ::placeholder {
+  color: #8b949e !important;
+  opacity: 1;
+}
+
+body.dark-mode .form-control::placeholder,
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #8b949e !important;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+body.dark-mode select option {
+  background-color: #161b22;
+  color: #e6edf3;
+}
+
+/* POS Cart Items Dark Mode */
+body.dark-mode .bg-light {
+  background-color: #21262d !important;
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .bg-light .fw-bold,
+body.dark-mode .bg-light small {
+  color: #e6edf3 !important;
+}
+
+/* Form Check Dark Mode */
+body.dark-mode .form-check-label {
+  color: #e6edf3 !important;
+}
+
+body.dark-mode .form-check-input {
+  background-color: #0d1117;
+  border-color: #30363d;
+}
+
+body.dark-mode .form-check-input:checked {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+
+/* Small text in dark mode */
+body.dark-mode small {
+  color: #8b949e !important;
+}
+
+/* Ensure all text is visible in dark mode */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode div {
+  color: inherit;
+}
+
+/* Cart Item Styling */
+.cart-item-bg {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+body.dark-mode .cart-item-bg {
+  background-color: #21262d !important;
+  border-color: #30363d !important;
+}
+
+.cart-item-text {
+  color: #212529;
+}
+
+body.dark-mode .cart-item-text {
+  color: #e6edf3 !important;
+}
+
+/* Button outline in dark mode */
+body.dark-mode .btn-outline-secondary {
+  color: #e6edf3;
+  border-color: #30363d;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #30363d;
+  border-color: #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode .btn-outline-secondary:disabled {
+  color: #8b949e;
+  border-color: #30363d;
+  background-color: transparent;
+}
+
+/* Pagination Dark Mode */
+body.dark-mode .pagination .page-link {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #e6edf3;
+}
+
+body.dark-mode .pagination .page-link:hover {
+  background-color: #21262d;
+  border-color: #30363d;
+  color: #58a6ff;
+}
+
+body.dark-mode .pagination .page-item.active .page-link {
+  background-color: #1976d2;
+  border-color: #1976d2;
+  color: white;
+}
+
+body.dark-mode .pagination .page-item.disabled .page-link {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #8b949e;
+}
+
+/* Badge Dark Mode - Category Badges */
+body.dark-mode .badge {
+  background-color: #21262d !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d;
+}
+
+body.dark-mode .badge-primary {
+  background-color: #1976d2 !important;
+  color: white !important;
+  border: 1px solid #1976d2;
+}
+
+body.dark-mode .badge-light {
+  background-color: #21262d !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d;
+}
+
+/* Settings Page Sidebar Navigation */
+.settings-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: #666;
+  text-align: left;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.settings-nav-item:hover {
+  background-color: #f5f5f5;
+  color: #1976d2;
+}
+
+.settings-nav-item.active {
+  background-color: #1976d2;
+  color: white;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.settings-nav-item svg {
+  font-size: 18px;
+}
+
+.settings-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Dark Mode Settings */
+body.dark-mode .settings-nav-item {
+  color: #8b949e;
+}
+
+body.dark-mode .settings-nav-item:hover {
+  background-color: #21262d;
+  color: #58a6ff;
+}
+
+body.dark-mode .settings-nav-item.active {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Responsive Styles */
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .settings-sidebar {
+    position: relative;
+    top: 0;
+  }
+
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .settings-nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Stats cards stack on tablet */
+  .stats-card {
+    margin-bottom: 16px;
+  }
+
+  /* Table responsive */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Modal adjustments */
+  .modal-dialog {
+    margin: 10px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  /* Stats cards */
+  .stats-card {
+    padding: 16px;
+  }
+
+  .stats-card i {
+    font-size: 32px;
+  }
+
+  .stats-card h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Cards */
+  .premium-card {
+    margin-bottom: 12px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Form controls */
+  .form-control,
+  .form-select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  /* Tables */
+  .table {
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  /* POS specific */
+  .cart-item-bg {
+    padding: 8px;
+  }
+
+  /* Sidebar adjustments */
+  .sidebar {
+    width: 260px;
+  }
+
+  .sidebar-nav-item {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .sidebar-nav-item i {
+    font-size: 18px;
+  }
+
+  /* Chart container */
+  .recharts-wrapper {
+    font-size: 11px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+  .main-content {
+    padding: 8px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+  }
+
+  /* Stats cards - full width stacking */
+  .stats-card {
+    padding: 12px;
+  }
+
+  .stats-card i {
+    font-size: 28px;
+  }
+
+  .stats-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .stats-card p {
+    font-size: 12px;
+  }
+
+  /* Cards */
+  .card-body {
+    padding: 12px;
+  }
+
+  /* Buttons - full width on mobile */
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  /* Form controls */
+  .form-control,
+  .form-select {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  /* Tables - compact view */
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px 4px;
+  }
+
+  /* Hide less important columns on mobile */
+  .table .d-none-mobile {
+    display: none;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  /* Modal */
+  .modal-dialog {
+    margin: 5px;
+    max-width: calc(100% - 10px);
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar-nav-item {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .sidebar-nav-item i {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  /* POS Cart */
+  .cart-item-bg {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .cart-item-bg .btn-sm {
+    padding: 4px 8px;
+  }
+
+  /* Input groups */
+  .input-group-text {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* Pagination */
+  .pagination {
+    font-size: 12px;
+  }
+
+  .page-link {
+    padding: 6px 10px;
+  }
+
+  /* Settings navigation - scroll horizontally */
+  .settings-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .settings-nav-item {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .main-content {
+    padding: 6px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  .stats-card {
+    padding: 10px;
+  }
+
+  .stats-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .table {
+    font-size: 11px;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .sidebar {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .stats-card {
+    padding: 12px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .premium-card {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Container max-width adjustments */
+@media (min-width: 1400px) {
+  .container-fluid {
+    max-width: 1320px;
+  }
+}
+
+/* Utility classes for responsive design */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-stack {
+    flex-direction: column;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+}
+
+/* Flexbox responsive utilities */
+.flex-wrap-mobile {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .flex-column-mobile {
+    flex-direction: column;
+  }
+
+  .gap-mobile-2 {
+    gap: 0.5rem;
+  }
+}
+
+/* Spacing adjustments for mobile */
+@media (max-width: 768px) {
+  .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .p-4 {
+    padding: 1rem !important;
+  }
+
+  .p-3 {
+    padding: 0.75rem !important;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* Additional Responsive Enhancements */
+
+/* Responsive Tables - Card View on Mobile */
+@media (max-width: 768px) {
+  /* Hide table headers on mobile */
+  .table-responsive table thead {
+    display: none;
+  }
+
+  /* Make table rows display as cards */
+  .table-responsive table,
+  .table-responsive table tbody,
+  .table-responsive table tr,
+  .table-responsive table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive table tr {
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+  }
+
+  body.dark-mode .table-responsive table tr {
+    background: #161b22;
+    border-color: #30363d;
+  }
+
+  .table-responsive table td {
+    text-align: right;
+    padding: 8px 10px;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table-responsive table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  /* Action buttons full width on mobile */
+  .table-responsive table td .btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .table-responsive table td .btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+
+  .modal-body {
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+  }
+
+  .modal-lg,
+  .modal-xl {
+    max-width: 100%;
+  }
+}
+
+/* Form Responsive */
+@media (max-width: 768px) {
+  .row > [class*='col-'] {
+    margin-bottom: 12px;
+  }
+
+  /* Stack form columns on mobile */
+  .row > .col-md-6,
+  .row > .col-md-4,
+  .row > .col-md-3 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* POS Page Responsive */
+@media (max-width: 992px) {
+  /* Stack POS layout on tablet */
+  .pos-layout .col-lg-8,
+  .pos-layout .col-lg-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Cart sticky on mobile */
+  .pos-layout .sticky-top {
+    position: relative;
+    top: 0 !important;
+  }
+}
+
+/* Product Grid Responsive */
+@media (max-width: 768px) {
+  /* 2 columns on mobile */
+  .product-grid .col-md-6,
+  .product-grid .col-lg-4 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 column on small mobile */
+  .product-grid .col-md-6,
+  .product-grid .col-lg-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Dashboard Stats Responsive */
+@media (max-width: 768px) {
+  /* 2 columns on mobile */
+  .stats-grid .col-md-6,
+  .stats-grid .col-lg-3 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 column on small mobile */
+  .stats-grid .col-md-6,
+  .stats-grid .col-lg-3 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Chart Responsive */
+@media (max-width: 768px) {
+  .recharts-wrapper {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  .recharts-surface {
+    width: 100% !important;
+  }
+}
+
+/* Input Group Responsive */
+@media (max-width: 576px) {
+  .input-group {
+    flex-wrap: wrap;
+  }
+
+  .input-group > .form-control,
+  .input-group > .form-select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .input-group-text {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Button Group Responsive */
+@media (max-width: 576px) {
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group > .btn {
+    width: 100%;
+    border-radius: 8px !important;
+    margin-bottom: 8px;
+  }
+
+  .btn-group-sm > .btn {
+    padding: 6px 12px;
+  }
+}
+
+/* Navbar Responsive */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+  }
+}
+
+/* Alert Responsive */
+@media (max-width: 576px) {
+  .alert {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Badge Responsive */
+@media (max-width: 576px) {
+  .badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+/* Pagination Responsive */
+@media (max-width: 576px) {
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination .page-item {
+    margin: 2px;
+  }
+
+  .pagination .page-link {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* Hide page numbers, show only prev/next */
+  .pagination .page-item:not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  .pagination .page-item.active {
+    display: inline-block;
+  }
+}
+
+/* Card Responsive */
+@media (max-width: 576px) {
+  .card {
+    border-radius: 8px;
+  }
+
+  .card-header,
+  .card-footer {
+    padding: 12px;
+  }
+}
+
+/* Login/Register Page Responsive */
+@media (max-width: 576px) {
+  .min-vh-100 .col-md-5,
+  .min-vh-100 .col-lg-4 {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .min-vh-100 .card-body {
+    padding: 24px 20px !important;
+  }
+
+  .min-vh-100 h2 {
+    font-size: 1.5rem;
+  }
+
+  .min-vh-100 h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Scrollbar for mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  .btn,
+  .form-check-input {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .btn-sm {
+    min-height: 36px;
+    min-width: 36px;
+  }
+}
+
+/* Prevent text selection on buttons for better mobile UX */
+@media (max-width: 768px) {
+  button,
+  .btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Smooth scrolling for mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  .min-vh-100 {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Landscape mode optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .main-content {
+    padding: 8px;
+  }
+
+  .stats-card {
+    padding: 10px;
+  }
+
+  .modal-body {
+    max-height: 60vh;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .navbar,
+  .btn,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .card {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Final Responsive Polish */
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive container */
+.container-fluid {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Responsive text utilities */
+.text-responsive {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.heading-responsive {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Ensure buttons don't break on small screens */
+.btn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    white-space: normal;
+  }
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .gap-3 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-4 {
+    gap: 0.75rem !important;
+  }
+}
+
+/* Ensure form inputs are touch-friendly */
+input,
+select,
+textarea,
+button {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+@media (min-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 576px) {
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .row > * {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Ensure overflow is handled properly */
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive card spacing */
+@media (max-width: 768px) {
+  .card + .card {
+    margin-top: 12px;
+  }
+}
+
+/* Mobile-first button sizing */
+@media (max-width: 576px) {
+  .btn-lg {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Ensure modals work well on all devices */
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive navbar */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}
+
+/* Ensure charts are responsive */
+.recharts-responsive-container {
+  min-height: 250px;
+}
+
+@media (min-width: 768px) {
+  .recharts-responsive-container {
+    min-height: 350px;
+  }
+}
+
+/* Mobile-optimized cart items */
+@media (max-width: 576px) {
+  .cart-item-bg {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .cart-item-bg .d-flex {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+}
+
+/* Responsive sticky elements */
+@media (max-width: 992px) {
+  .sticky-top {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 576px) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile-friendly dropdown */
+@media (max-width: 576px) {
+  .dropdown-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive alert */
+@media (max-width: 576px) {
+  .alert {
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Ensure proper touch targets */
+@media (max-width: 768px) {
+  a, button, .btn, .form-check-input, .form-check-label {
+    cursor: pointer;
+  }
+}
+
+/* Mobile-optimized form layout */
+@media (max-width: 576px) {
+  .form-group,
+  .mb-3 {
+    margin-bottom: 12px !important;
+  }
+
+  label {
+    margin-bottom: 6px;
+  }
+}
+
+/* Responsive badge sizing */
+.badge {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .badge {
+    font-size: 0.7rem;
+  }
+}
+
+/* Ensure proper line height for readability */
+body {
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  body {
+    line-height: 1.5;
+  }
+}
+
+/* Mobile-optimized pagination */
+@media (max-width: 576px) {
+  .pagination {
+    font-size: 0.875rem;
+  }
+
+  .pagination .page-link {
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+/* Responsive utility classes */
+@media (max-width: 576px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+}
+
+@media (min-width: 577px) {
+  .mobile-hide {
+    display: block !important;
+  }
+
+  .mobile-show {
+    display: none !important;
+  }
+}
+
+/* Ensure proper z-index stacking */
+.modal {
+  z-index: 1050;
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.sidebar {
+  z-index: 1000;
+}
+
+/* Mobile-friendly table actions */
+@media (max-width: 768px) {
+  .table td .btn-group,
+  .table td .d-flex {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .table td .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive overflow handling */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: none;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Ensure proper font rendering on mobile */
+@media (max-width: 768px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* GST Calculator Specific Styles */
+
+/* Calculator Card Animations */
+.gst-calculator-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gst-calculator-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* GST Rate Buttons */
+.gst-rate-btn {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.gst-rate-btn:hover {
+  transform: scale(1.05);
+}
+
+.gst-rate-btn.active {
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+/* Result Cards */
+.result-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-mode .result-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+/* Breakdown Cards */
+.breakdown-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.breakdown-card:hover {
+  border-color: #1976d2;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+}
+
+body.dark-mode .breakdown-card {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+body.dark-mode .breakdown-card:hover {
+  border-color: #58a6ff;
+}
+
+/* Amount Display */
+.amount-display {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* GST Badge */
+.gst-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Calculation Type Toggle */
+.calc-type-toggle {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+body.dark-mode .calc-type-toggle {
+  background: #21262d;
+}
+
+.calc-type-toggle .btn {
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Effects */
+.gst-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.1);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Responsive GST Calculator */
+@media (max-width: 768px) {
+  .gst-calculator-card {
+    margin-bottom: 16px;
+  }
+
+  .amount-display {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .gst-rate-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .breakdown-card {
+    padding: 12px;
+  }
+
+  .gst-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .calc-type-toggle .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .result-card {
+    padding: 16px;
+  }
+
+  .breakdown-card {
+    padding: 10px;
+  }
+
+  .gst-rate-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Copy Button Animation */
+.copy-btn {
+  transition: all 0.3s ease;
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.copy-btn.copied {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+/* Table Styling for GST Calculator */
+.gst-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gst-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.gst-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+body.dark-mode .gst-table tbody tr:hover {
+  background-color: #21262d;
+}
+
+/* Reference Guide Cards */
+.reference-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reference-card:hover {
+  border-color: #1976d2;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .reference-card {
+  border-color: #30363d;
+}
+
+body.dark-mode .reference-card:hover {
+  border-color: #58a6ff;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pulse Animation for Calculate Button */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.btn-calculate:hover {
+  animation: pulse 2s infinite;
+}
+
+/* Number Input Styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 40px;
+}
+
+/* Smooth Transitions */
+.gst-calculator-card,
+.breakdown-card,
+.reference-card,
+.gst-rate-btn {
+  will-change: transform;
+}
+
+/* Loading State */
+.calculating {
+  position: relative;
+  overflow: hidden;
+}
+
+.calculating::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+/* Success State */
+.success-state {
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Info Alert Styling */
+.gst-info-alert {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  border-left: 4px solid #0284c7;
+  border-radius: 8px;
+}
+
+body.dark-mode .gst-info-alert {
+  background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+  border-left-color: #38bdf8;
+}
