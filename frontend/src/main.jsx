@@ -5,6 +5,7 @@ import { store } from './redux/store'
 import App from './App.jsx'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import './index.css'
+import './config/axios' // Configure axios globally
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

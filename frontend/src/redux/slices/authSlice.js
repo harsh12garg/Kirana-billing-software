@@ -15,7 +15,8 @@ export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI
     localStorage.setItem('user', JSON.stringify(data))
     return data
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data.message)
+    const message = error.response?.data?.message || error.message || 'Login failed'
+    return thunkAPI.rejectWithValue(message)
   }
 })
 
@@ -25,7 +26,8 @@ export const register = createAsyncThunk('auth/register', async (userData, thunk
     localStorage.setItem('user', JSON.stringify(data))
     return data
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data.message)
+    const message = error.response?.data?.message || error.message || 'Registration failed'
+    return thunkAPI.rejectWithValue(message)
   }
 })
 
