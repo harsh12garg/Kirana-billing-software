@@ -1,7 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const path = require('path');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -44,15 +43,23 @@ app.use('/api/credits', require('./routes/creditRoutes'));
 app.use('/api/settings', require('./routes/settingsRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 
-// Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend', 'dist', 'index.html'));
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: 'Kirana Shop Management API is running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      auth: '/api/auth',
+      products: '/api/products',
+      bills: '/api/bills',
+      customers: '/api/customers',
+      credits: '/api/credits',
+      settings: '/api/settings',
+      dashboard: '/api/dashboard'
+    }
   });
-}
+});
 
 // Error Handler (must be last)
 app.use(errorHandler);
