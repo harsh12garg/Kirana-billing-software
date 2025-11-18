@@ -101,28 +101,34 @@ const Layout = () => {
       {/* Main Content */}
       <div className="main-content flex-grow-1">
         {/* Mobile Navbar */}
-        <MDBNavbar expand="lg" light bgColor="white" className="d-lg-none mb-4 shadow-sm">
-          <MDBContainer fluid>
-            <MDBNavbarToggler
+        <div className="d-lg-none mb-3 mobile-navbar">
+          <div className="d-flex align-items-center justify-content-between p-3 bg-white shadow-sm" style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+            {/* Hamburger Menu Button */}
+            <button
+              className="btn btn-link text-dark p-0 mobile-menu-btn"
               onClick={() => setShowSidebar(!showSidebar)}
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Toggle menu"
+              style={{ fontSize: '24px', textDecoration: 'none' }}
             >
-              <MDBIcon icon="bars" fas />
-            </MDBNavbarToggler>
-            <MDBNavbarBrand href="#">
-              <span className="fw-bold text-primary">Inventory & Billing</span>
-            </MDBNavbarBrand>
-            <MDBBtn
-              color="light"
-              size="sm"
+              <MDBIcon fas icon="bars" />
+            </button>
+
+            {/* Brand Name */}
+            <span className="fw-bold text-primary" style={{ fontSize: '14px' }}>
+              Inventory & Billing
+            </span>
+
+            {/* Dark Mode Toggle Button */}
+            <button
+              className="btn btn-link text-dark p-0 mobile-theme-btn"
               onClick={() => dispatch(toggleTheme())}
+              aria-label="Toggle theme"
+              style={{ fontSize: '20px', textDecoration: 'none' }}
             >
               <MDBIcon fas icon={theme === 'light' ? 'moon' : 'sun'} />
-            </MDBBtn>
-          </MDBContainer>
-        </MDBNavbar>
+            </button>
+          </div>
+        </div>
 
         {/* Page Content */}
         <MDBContainer fluid className="animate-fade-in">
