@@ -44,13 +44,10 @@ const Login = () => {
             <div className="animate-scale-in">
               <MDBCard className="shadow-lg border-0" style={{ borderRadius: '16px' }}>
                 <MDBCardBody className="p-5">
-                  {/* Logo */}
+                  {/* Business Name */}
                   <div className="text-center mb-4">
-                    <div className="bg-primary text-white rounded-3 d-inline-flex p-3 mb-3" style={{ width: '80px', height: '80px' }}>
-                      <MDBIcon fas icon="store" size="3x" />
-                    </div>
-                    <h2 className="fw-bold text-primary mb-2">Kirana</h2>
-                    <p className="text-muted">Shop Management System</p>
+                    <h2 className="fw-bold text-primary mb-2">Harsh Kirana Store</h2>
+                    <p className="text-muted">Inventory & Billing Management</p>
                   </div>
 
                   {/* Welcome Text */}
@@ -132,7 +129,7 @@ const Login = () => {
 
               {/* Footer */}
               <p className="text-center mt-4 text-muted small">
-                © 2024 Kirana Shop. All rights reserved.
+                © 2024 Harsh Kirana Store. All rights reserved.
               </p>
             </div>
           </div>

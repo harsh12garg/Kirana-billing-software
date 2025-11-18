@@ -49,8 +49,8 @@ const Layout = () => {
         {/* Business Name Section */}
         <div className="p-3 p-md-4 border-bottom">
           <div className="mb-3">
-            <h5 className="mb-1 fw-bold text-primary" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>Inventory & Billing</h5>
-            <h5 className="mb-0 fw-bold text-primary" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>Software</h5>
+            <h5 className="mb-1 fw-bold text-primary" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>Harsh Kirana Store</h5>
+            <p className="mb-0 text-muted small">Inventory & Billing</p>
           </div>
           <div className="bg-light rounded-3 p-2 p-md-3">
             <p className="mb-1 fw-semibold small text-truncate">{user?.name}</p>
@@ -112,7 +112,7 @@ const Layout = () => {
               <MDBIcon icon="bars" fas />
             </MDBNavbarToggler>
             <MDBNavbarBrand href="#">
-              <span className="fw-bold text-primary">Inventory & Billing</span>
+              <span className="fw-bold text-primary">Harsh Kirana Store</span>
             </MDBNavbarBrand>
             <MDBBtn
               color="light"
